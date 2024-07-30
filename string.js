@@ -10,6 +10,7 @@ let twoSum = function (nums, target){
     }
 } 
 
+
 //eg:
 let num1 = [2,7,11,15];
 console.log(twoSum(num1, 9));
