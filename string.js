@@ -14,8 +14,10 @@ let twoSum = function (nums, target){
 let num1 = [2,7,11,15];
 console.log(twoSum(num1, 9));
 
+
 let num2 = [3,2,4];
 console.log(twoSum(num2, 6));
+
 
 let num3 = [3,3];
 console.log(twoSum(num3, 6));
