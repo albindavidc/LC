@@ -25,7 +25,7 @@
 
 -----------------------------------------------------------------------------
 
-2011. Final value of Variables After Performing Operations
+//2011. Final value of Variables After Performing Operations
 
 var finalValueAfterOperations = function (operations) {
     count = 0;
@@ -53,7 +53,7 @@ console.log(finalValueAfterOperations(operations));
 
 -----------------------------------------------------------------------------
 
-2455. Average value of even numbers that are divisible by 3
+// 2455. Average value of even numbers that are divisible by 3
 
 var averageValue = function(nums) {
     let getEven = nums.filter(num => num%2 ===0);
