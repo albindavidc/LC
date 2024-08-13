@@ -23,6 +23,19 @@
 
 -----------------------------------------------------------------------------
 
+//744. Find smallest letter greater than target
+
+var nextGreatestLetter = function (letters, target) {
+    for (let char of letters) {
+        if (char > target) {
+            return result = char;
+        }
+    }
+    return letters[0];
+};
+
+console.log(nextGreatestLetter(["x", "x", "y", "y"], "z"));
+
 -----------------------------------------------------------------------------
 
 //2011. Final value of Variables After Performing Operations
