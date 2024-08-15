@@ -19,6 +19,23 @@
 
 -----------------------------------------------------------------------------
 
+
+//3131. Find the integer added to array one
+
+var addedInteger = function (nums1, nums2) {
+    nums1.sort((a, b) => a - b);
+    nums2.sort((a, b) => a - b);
+
+    let j = nums2[0] - nums1[0];
+
+    for (i = 0; i < nums1.length; i++) {
+        if (nums1[i] + j === nums2[i]) {
+            return j;
+        }
+        return j;
+    }
+};
+
 -----------------------------------------------------------------------------
 
 //1662. Check if two array strings are equalent
