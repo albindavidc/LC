@@ -15,6 +15,31 @@
 
 -----------------------------------------------------------------------------
 
+
+//1614. Maximum nesting depth of paranthesis
+
+var maxDepth = function(s) {
+    let currDepth = 0;
+    let maxDepth = 0;
+
+    for(char of s){
+        switch (char){
+            case "(":
+            currDepth++;
+            if(currDepth>maxDepth){
+                maxDepth++;
+            }
+            break;
+            case ")":
+            currDepth--;
+            break;
+            default:
+            break;
+        }
+    }
+    return maxDepth;
+};
+
 -----------------------------------------------------------------------------
 
 //3028. Ant on the boundary
