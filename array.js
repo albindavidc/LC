@@ -13,6 +13,27 @@
 
 -----------------------------------------------------------------------------
 
+//1952. Three Divisors
+function isThree(n) {
+    // Function to check if a number is prime
+    function isPrime(num) {
+        if (num <= 1) return false;
+        if (num <= 3) return true;
+        if (num % 2 === 0 || num % 3 === 0) return false;
+        for (let i = 5; i * i <= num; i += 6) {
+            if (num % i === 0 || num % (i + 2) === 0) return false;
+        }
+        return true;
+    }
+
+    // Check if n is a perfect square
+    const sqrtN = Math.sqrt(n);
+    if (sqrtN % 1 !== 0) return false; // Not a perfect square
+
+    // Check if sqrtN is a prime number
+    return isPrime(sqrtN);
+}
+
 -----------------------------------------------------------------------------
 
 
