@@ -19,6 +19,18 @@
 
 -----------------------------------------------------------------------------
 
+//3110. Score of a string
+
+var scoreOfString = function(s) {
+    let score = 0;
+
+    for(i=0;i<s.length-1;i++){
+        score += Math.abs(s.charCodeAt(i) - s.charCodeAt(i+1))
+    }
+    return score;
+};
+
+
 -----------------------------------------------------------------------------
 
 //507. Perfect Number
