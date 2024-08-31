@@ -11,6 +11,31 @@
 
 -----------------------------------------------------------------------------
 
+//169.Majority Elements
+
+var majorityElement = function (nums) {
+    let n = nums.length;
+    let newMap = new Map();
+    for (num of nums) {
+        if (newMap.has(num)) {
+            newMap.set(num, (newMap.get(num))+1);
+
+        } else {
+            newMap.set(num,1);
+        }
+    }
+
+    for(let[key,value] of newMap){
+        if(value> Math.floor(n/2)){
+            return key;
+        }
+    }
+
+    return null;
+
+};
+
+
 -----------------------------------------------------------------------------
 
 //1952. Three Divisors
