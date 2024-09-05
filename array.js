@@ -9,6 +9,21 @@
 
 -----------------------------------------------------------------------------
 
+//121. Best time to buy and sell stock
+
+var maxProfit = function (prices) {
+    let minPrice = Infinity;
+    let maxProfit = 0;
+    for (i = 0; i < prices.length; i++) {
+        if(prices[i] < minPrice){
+            minPrice = prices[i];
+        }else{
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice)
+        }
+    }
+    return maxProfit;
+};
+
 -----------------------------------------------------------------------------
 
 //169.Majority Elements
