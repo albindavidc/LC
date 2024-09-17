@@ -15,6 +15,14 @@
 
 -----------------------------------------------------------------------------
 
+//125. Valid Palindrome
+
+var isPalindrome = function(s) {
+    s = s.toLowerCase().replace(/[^a-z0-9]/g, '')
+    const joinS = s.split('').reverse().join('');
+    return s === joinS
+};
+
 -----------------------------------------------------------------------------
 
 //709. To Lower Case
