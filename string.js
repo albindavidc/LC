@@ -13,6 +13,26 @@
 
 -----------------------------------------------------------------------------
 
+// 28. Find the index of first occurence in a string
+
+var strStr = function(haystack, needle) {
+    
+    let needleLength = needle.length;
+    needleLength === '' ? -1: needleLength;
+    let haystackLength = haystack.length;
+
+    for(i=0; i<=haystackLength - needleLength; i++){
+        let sliceHaystack = haystack.slice(i, i+needleLength);
+
+        if(sliceHaystack === needle){
+            return i
+        }
+    }
+
+    return -1;
+    
+};
+
 -----------------------------------------------------------------------------
 
 //125. Valid Palindrome
