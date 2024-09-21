@@ -11,6 +11,36 @@
 
 -----------------------------------------------------------------------------
 
+
+//242. Valid Anagram
+
+var isAnagram = function(s, t) {
+    if(s.length !== t.length){
+        return false;
+    }
+
+    const newMap = new Map();
+
+    for(i=0;i<s.length;i++){
+        newMap.set(s[i], (newMap.get(s[i]) || 0) + 1)
+
+    }
+    
+    for(i =0; i<t.length;i++){
+        if(!newMap.has(t[i])){
+            return false;
+        }
+
+        newMap.set(t[i], (newMap.get(t[i]) || 0) -1)
+        if(newMap.get(t[i]) === 0){
+        newMap.delete(t[i]);   
+        }
+    }
+
+    return newMap.size === 0;
+
+};
+
 -----------------------------------------------------------------------------
 
 // 28. Find the index of first occurence in a string
