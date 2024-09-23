@@ -7,6 +7,19 @@
 
 -----------------------------------------------------------------------------
 
+// 2951. Find the peaks
+var findPeaks = function(mountain) {
+    const peakIndex = [];
+
+    for(i=1;i<mountain.length-1; i++){
+        if(mountain[i] > mountain[i+1] && mountain[i] > mountain[i-1]){
+            peakIndex.push(i)
+        }
+
+    }
+    return peakIndex
+};
+
 -----------------------------------------------------------------------------
 
 //121. Best time to buy and sell stock
