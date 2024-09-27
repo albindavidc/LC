@@ -3,7 +3,32 @@
 
 -----------------------------------------------------------------------------
 
+//69. sqrt(x)
+var mySqrt = function(x) {
+    return Math.floor(x ** 0.5)
+};
+
 -----------------------------------------------------------------------------
+
+//383.RansomNote
+var canConstruct = function (ransomNote, magazine) {
+    let magazineMap = new Map([]);
+
+    for (const mag of magazine) {
+        magazineMap.set(mag, (magazineMap.get(mag) || 0) + 1) ;
+    }
+
+    for (const char of ransomNote) {
+        if(!magazineMap.has(char) || magazineMap.get(char) === 0){
+            return false;
+        }
+            magazineMap.set( char, magazineMap.get(char) - 1)
+
+        
+    }
+    return true;
+
+};
 
 -----------------------------------------------------------------------------
 
