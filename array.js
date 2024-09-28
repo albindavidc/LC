@@ -1,6 +1,21 @@
 
 -----------------------------------------------------------------------------
 
+//282. Move Zeros
+var moveZeroes = function (nums) {
+    let index = 0;
+    for (i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[index] = nums[i];
+            index++
+        }
+    }
+
+    for (i = index; i < nums.length; i++) {
+        nums[i] = 0
+    }
+};
+
 -----------------------------------------------------------------------------
 
 //69. sqrt(x)
