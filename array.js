@@ -1,6 +1,28 @@
 
 -----------------------------------------------------------------------------
 
+//189.Rotate Array
+var rotate = function(nums, k) {
+    k = k % nums.length
+    const splitIndex = nums.length - k
+
+    function reverse(arr, start, end){
+        while(start<=end){
+            let temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--
+        }
+    }
+    reverse(nums, 0, nums.length-1)
+    reverse(nums, 0, k-1)
+    reverse(nums, k, nums.length-1)
+};
+
+-----------------------------------------------------------------------------
+
+
 //282. Move Zeros
 var moveZeroes = function (nums) {
     let index = 0;
