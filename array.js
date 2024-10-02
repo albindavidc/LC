@@ -1,6 +1,19 @@
 
 -----------------------------------------------------------------------------
 
+//349. Intersection of Two Arrays
+var intersection = function (nums1, nums2) {
+    let intersectionEl = new Set();
+    const nums1Val = new Set(nums1);
+    for (i = 0; i < nums2.length; i++) {
+        if (nums1Val.has(nums2[i])) {
+            intersectionEl.add(nums2[i]);
+        }
+    }
+    return Array.from(intersectionEl)
+};
+
+-----------------------------------------------------------------------------
 //189.Rotate Array
 var rotate = function(nums, k) {
     k = k % nums.length
