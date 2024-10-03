@@ -1,6 +1,26 @@
 
 -----------------------------------------------------------------------------
 
+//350. Intersection of two arrays II
+var intersect = function (nums1, nums2) {
+    const numsMap = new Map();
+    const intersectionArray = [];
+
+    for(let i=0;i<nums1.length;i++){
+        numsMap.set(nums1[i], (numsMap.get(nums1[i]) || 0) + 1)
+    }
+
+    for(let i=0; i<nums2.length;i++){
+        if(numsMap.has(nums2[i]) && numsMap.get(nums2[i]) >0){
+        intersectionArray.push(nums2[i])
+        numsMap.set(nums2[i], numsMap.get(nums2[i]) -1)
+        }
+    }
+    return intersectionArray
+};
+
+-----------------------------------------------------------------------------
+
 //349. Intersection of Two Arrays
 var intersection = function (nums1, nums2) {
     let intersectionEl = new Set();
