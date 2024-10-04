@@ -1,6 +1,25 @@
 
 -----------------------------------------------------------------------------
 
+//724. Find Pivot Index
+
+var pivotIndex = function (nums) {
+    for (i = 0; i < nums.length; i++) {
+
+        let leftSide = nums.slice(0, i)
+        let rightSide = nums.slice(i+1)
+        let leftSum = leftSide.reduce((acc, curr) =>  acc + curr, 0 )
+        let rightSum = rightSide.reduce((acc, curr) =>  acc + curr, 0 )
+
+        if (leftSum === rightSum) {
+            return i
+        }
+    }
+    return -1
+};
+
+-----------------------------------------------------------------------------
+
 //350. Intersection of two arrays II
 var intersect = function (nums1, nums2) {
     const numsMap = new Map();
