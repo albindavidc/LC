@@ -1,3 +1,18 @@
+-----------------------------------------------------------------------------
+
+// 747. Largest number atleat twise of others
+var dominantIndex = function (nums) {
+    const largestNum = Math.max(...nums)
+    const indexLargestMax = nums.indexOf(largestNum)
+    for (i = 0; i < nums.length; i++) {
+        if (i !== indexLargestMax && largestNum < 2 * nums[i]) {
+
+            return -1
+        }
+    }
+
+    return indexLargestMax
+};
 
 -----------------------------------------------------------------------------
 
