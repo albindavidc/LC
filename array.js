@@ -1,6 +1,24 @@
+
+
+//448. Find all numbers disappeared in an array
+
+var findDisappearedNumbers = function(nums) {
+    const length = nums.length;
+    const  newSet = new Set(nums);
+    const result = [];
+    for(let i =1; i<=length; i++){
+        if(!newSet.has(i)){
+            result.push(i);
+        }
+    }
+    return result
+};
+
+
+
 -----------------------------------------------------------------------------
 
-// 747. Largest number atleat twise of others
+// 747. Largest number atleast twice of others
 var dominantIndex = function (nums) {
     const largestNum = Math.max(...nums)
     const indexLargestMax = nums.indexOf(largestNum)
