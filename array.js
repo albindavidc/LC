@@ -1,4 +1,18 @@
 
+//414. Third Maximum Number
+
+var thirdMax = function (nums) {
+    const numsValue = Array.from(new Set(nums));
+    const sorted = numsValue.sort((a, b) => b - a)
+    if (sorted.length >= 3) {
+        return sorted[2]
+    } else {
+        return sorted[0]
+    }
+};
+
+-----------------------------------------------------------------------------
+
 
 //448. Find all numbers disappeared in an array
 
@@ -13,7 +27,6 @@ var findDisappearedNumbers = function(nums) {
     }
     return result
 };
-
 
 
 -----------------------------------------------------------------------------
