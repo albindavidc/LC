@@ -1,6 +1,20 @@
 
+
 -----------------------------------------------------------------------------
 
+//977. Squares of a sorted array
+
+var sortedSquares = function (nums) {
+    let result = []
+
+    nums.forEach(num => {
+        result.push(num * num)
+    })
+
+    return result.sort((a, b) => a - b)
+};
+
+-----------------------------------------------------------------------------
 
 //1295. Find numbers with even number of digits
 
