@@ -3,6 +3,30 @@
 
 -----------------------------------------------------------------------------
 
+//415. Add Strings
+
+var addStrings = function (num1, num2) {
+    let carry = 0;
+    let result = '';
+    let i = num1.length - 1;
+    let j = num2.length - 1;
+
+    while (i >= 0 || j >= 0 || carry > 0) {
+        let digit1 = i >= 0 ? Number(num1[i]) : 0;
+        let digit2 = j >= 0 ? Number(num2[j]) : 0;
+
+        let sum = digit1 + digit2 + carry;
+        carry = Math.floor(sum / 10);
+        result = (sum % 10) + result;
+
+        i--;
+        j--;
+
+    }
+    return result;
+
+};
+
 -----------------------------------------------------------------------------
 
 //387. First Unique Character in a String
