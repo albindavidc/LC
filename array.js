@@ -1,5 +1,17 @@
 
 
+
+// 2022. Convert 1D array into 2D array
+
+var construct2DArray = function(original, m, n) {
+    if(m*n !== original.length) return [];
+    let result = []
+    for(let i = 0; i<m;i++){
+        result.push(original.slice(i*n, i*n +n))
+    }
+    return result;
+};
+
 -----------------------------------------------------------------------------
 
 //977. Squares of a sorted array
