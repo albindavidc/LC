@@ -1,5 +1,26 @@
 
 
+// 35. Search Insert Position
+
+var searchInsert = function(nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+
+    while(left <= right){
+        let midd = Math.floor((left + right)/2);
+
+        if(nums[midd] === target){
+            return midd;
+        } else if(nums[midd] < target){
+            left = midd + 1;
+        } else{
+            right = midd - 1
+        }
+    }
+    return left
+};
+
+-----------------------------------------------------------------------------
 
 // 2022. Convert 1D array into 2D array
 
