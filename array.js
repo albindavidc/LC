@@ -1,5 +1,17 @@
 
 
+//1528. Shuffle String
+
+var restoreString = function(s, indices) {
+    let result = new Array(s.length).fill('')
+    for(let i =0; i< indices.length; i++){
+        result[indices[i]] = s[i] 
+    }
+    return result.join('')
+};
+
+-----------------------------------------------------------------------------
+
 // 35. Search Insert Position
 
 var searchInsert = function(nums, target) {
