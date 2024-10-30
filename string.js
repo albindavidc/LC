@@ -1,4 +1,22 @@
 
+//1047. Remove all adjacent duplicates in string
+
+var removeDuplicates = function(s) {
+    let result = [];
+    for(let char of s){
+        if(result.length && result[result.length - 1] === char){
+            result.pop(char)
+        }else{
+            result.push(char)
+        }
+    }
+
+    return result.join('');
+};
+
+-----------------------------------------------------------------------------
+
+
 // 43. Multiply Strings
 var multiply = function(num1, num2) {
     if(num1 === '0' || num2 === '0') return '0';
